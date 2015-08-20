@@ -7,17 +7,17 @@ function customerMessage(score){
 	if(score <= 2){
 		$("#custResultDialog").html(underTwo);
 		$("#custResultDialog").dialog("open");
-		// alert("option one: " + underTwo);
+		console.log("option one: " + underTwo);
 	}
 	else if(score >= 2 && score <= 3){
 		$("#custResultDialog").html(twoUnderThree);
 		$("#custResultDialog").dialog("open");
-		// alert("option two: " + twoUnderThree);
+		console.log("option two: " + twoUnderThree);
 	}
 	else if(score >=3 && score <=5){
 		$("#custResultDialog").html(threeUnderFive);
 		$("#custResultDialog").dialog("open");
-		// alert("option three: " + threeUnderFive);
+		console.log("option three: " + threeUnderFive);
 	}
 }
 
@@ -51,12 +51,14 @@ $("#custResultDialog").dialog({
 			text: "Learn More",
 			click: function(){
 				alert("This will open a mail form");
+				$("#custResultDialog").empty();
 				$(this).dialog("close");
 			}
 		},
 		{
 			text: "Close",
 			click: function(){
+				$("#custResultDialog").empty();
 				$(this).dialog("close");
 			}
 		}
