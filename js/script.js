@@ -4,7 +4,7 @@ var twoUnderThree = "Based on your score, you would be a good candidate for eith
 var threeUnderFive = "Based on your score, you would value the benefits of a Trust.  Also, please consider any additionaly recommendations provided based on your answers in Section 1 (if any).  To learn more about Wills and Trusts, please Contact our office for an appointment.";
 
 function customerMessage(score){
-	if(score <= 2){
+	if(score < 2){
 		$("#custResultDialog").html(underTwo);
 		$("#custResultDialog").dialog("open");
 		console.log("option one: " + underTwo);
