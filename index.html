@@ -3,7 +3,7 @@
    <head>
       <title>Calc</title>
       <link rel="stylesheet" type="text/css" href="js/jquery/jquery-ui.min.css">
-      // <script type="text/javascript" src="js/jquery/external/jquery/jquery.js"></script>
+      <script type="text/javascript" src="js/jquery/external/jquery/jquery.js"></script>
       <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
       <style type="text/css">
          body{
@@ -15,6 +15,7 @@
          }
          table {
          border-collapse: collapse;
+         width: 100%;
          }
          td, th {
          border: 1px solid #999;
@@ -263,7 +264,7 @@
          <h4>Your Score is: <span id="score">&nbsp;</span></h4>
          <!-- Total before average -->
          <span id="sum" style="display:none;">&nbsp;</span>
-         <button onclick="customerMessage(parseInt($('#score').html()))">Get your anwser!</button>
+         <button onclick="customerMessage(parseInt($('#score').html()))">Generate Recommendation</button>
       </div>
       <div id="custResultDialog"></div>
       <script type="text/javascript" src="js/script.js"></script>

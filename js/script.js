@@ -4,7 +4,6 @@ var twoUnderThree = "Based on your score, you would be a good candidate for eith
 var threeUnderFive = "Based on your score, you would value the benefits of a Trust.  Also, please consider any additionaly recommendations provided based on your answers in Section 1 (if any).  To learn more about Wills and Trusts, please Contact our office for an appointment.";
 
 function customerMessage(score){
-	
 	if(score <= 2){
 		$("#custResultDialog").html(underTwo);
 		$("#custResultDialog").dialog("open");
@@ -39,8 +38,9 @@ function calculateScore(){
 	var score = 0;
 	var sum = parseInt($("#sum").html());
 	score = sum / questionTotals;
-	$("#score").html(score);
+	$("#score").html(Math.round(score * 100) / 100);
 }
+
 $("#custResultDialog").dialog({
 	autoOpen: false,
 	draggable: true,
@@ -48,15 +48,15 @@ $("#custResultDialog").dialog({
 	title: "Trust Calculator",
 	buttons: [
 		{
-			text: "Close",
+			text: "Learn More",
 			click: function(){
+				alert("This will open a mail form");
 				$(this).dialog("close");
 			}
 		},
 		{
-			text: "Learn More",
+			text: "Close",
 			click: function(){
-				alert("This will open a mail form");
 				$(this).dialog("close");
 			}
 		}
